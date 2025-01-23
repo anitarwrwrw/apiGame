@@ -8,4 +8,6 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::post('tebak/store', [TebakAngkaController::class, "store"]);
+Route::post('/tebak/store', [TebakAngkaController::class, "store"]);
+Route::get('/riwayat', [TebakAngkaController::class, "index"]);
+Route::delete('/hapus/{id}', [TebakAngkaController::class, "delete"]);
