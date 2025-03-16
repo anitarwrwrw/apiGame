@@ -9,7 +9,9 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::post('/tebak/store', [TebakAngkaController::class, "store"]);
-Route::get('/riwayat', [TebakAngkaController::class, "index"]);
-Route::delete('/hapus/{id}', [TebakAngkaController::class, "delete"]);
+// Route::post('/tebak/store', [TebakAngkaController::class, "store"]);
+// Route::get('/riwayat', [TebakAngkaController::class, "index"]);
+// Route::delete('/hapus/{id}', [TebakAngkaController::class, "delete"]);
+
 Route::get('/tebak/sync', [SyncController::class, "syncFromServer"]);
+Route::post('/tebakan/sync', [SyncController::class, 'syncToServer']);
