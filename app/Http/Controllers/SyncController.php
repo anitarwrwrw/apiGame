@@ -26,7 +26,5 @@ class SyncController extends Controller
         }
         return response()->json(['message' => 'Data berhasil disinkronisasi ke server.'], 200);
     }
-
-
     
 }
